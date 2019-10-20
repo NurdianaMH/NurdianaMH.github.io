@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/basic_mode">
+
+    <fragment
+        android:id="@+id/basic_mode"
+        android:name="com.example.calculateapp.NumModeFragment"
+        tools:layout="@layout/fragment_num_mode" />
+    <fragment android:id="@+id/scientific_mode" />
+</navigation>
