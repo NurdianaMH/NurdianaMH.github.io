@@ -5,10 +5,13 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +32,7 @@ public class NumModeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private Button toSciModeButton;
 
     public NumModeFragment() {
         // Required empty public constructor
@@ -65,8 +69,19 @@ public class NumModeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_num_mode, container, false);
+        final View view = inflater.inflate(R.layout.fragment_num_mode, container, false);
+        toSciModeButton = (Button) view.findViewById(R.id.buttonToSci);
+        toSciModeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int action = R.id.action_basic_to_scientific_mode;
+                Navigation.findNavController(view).navigate(action);
+            }
+        });
+        return view;
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

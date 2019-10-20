@@ -5,21 +5,23 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link SciFragment.OnFragmentInteractionListener} interface
+ * {@link SciModeFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link SciFragment#newInstance} factory method to
+ * Use the {@link SciModeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SciFragment extends Fragment {
+public class SciModeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,8 +32,9 @@ public class SciFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private Button toNumButton;
 
-    public SciFragment() {
+    public SciModeFragment() {
         // Required empty public constructor
     }
 
@@ -44,8 +47,8 @@ public class SciFragment extends Fragment {
      * @return A new instance of fragment SciFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SciFragment newInstance(String param1, String param2) {
-        SciFragment fragment = new SciFragment();
+    public static SciModeFragment newInstance(String param1, String param2) {
+        SciModeFragment fragment = new SciModeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,7 +69,16 @@ public class SciFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sci, container, false);
+        final View view = inflater.inflate(R.layout.fragment_sci_mode, container, false);
+        toNumButton = (Button) view.findViewById(R.id.buttonToNum);
+        toNumButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int action = R.id.action_scientific_to_basic_mode;
+                Navigation.findNavController(view).navigate(action);
+            }
+        });
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -79,12 +91,12 @@ public class SciFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
