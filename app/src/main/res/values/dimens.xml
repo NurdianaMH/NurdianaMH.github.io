@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimButtonText">30sp</dimen>
+    <dimen name="dimExpressionText">34sp</dimen>
+    <dimen name="dimAnswerText">25sp</dimen>
+</resources>
