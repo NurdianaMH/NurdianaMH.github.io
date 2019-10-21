@@ -120,15 +120,24 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
         multB.setOnClickListener(this);
         divideB.setOnClickListener(this);
         minusB.setOnClickListener(this);
+        plusB.setOnClickListener(this);
         equalB.setOnClickListener(this);
         dotB.setOnClickListener(this);
         delB.setOnClickListener(this);
+        delB.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+                exprTextView.setText("");
+                return true;
+            }
+        });
 
         return view;
     }
 
     private String appendToText(CharSequence text1, String str2) {
-        return new StringBuilder().append(text1).append(str2).toString();
+        return text1 + str2;
     }
 
     @Override
@@ -217,7 +226,9 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
                 exprTextView.setText(expr);
                 break;
             case R.id.buttonDelete:
-
+                String str = (String)exprTextView.getText();
+                str = str.substring(0, str.length() - 1);
+                exprTextView.setText(str);
                 break;
 
             default:
