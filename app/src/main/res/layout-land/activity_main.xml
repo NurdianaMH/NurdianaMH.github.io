@@ -7,29 +7,40 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollBig"
+        android:layout_width="0dp"
         android:layout_height="102dp"
-        android:gravity="bottom|right"
-        android:text="TextView"
-        android:textColor="@color/colorBlackPanel"
-        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textViewBig"
+            android:layout_width="0dp"
+            android:layout_height="147dp"
+            android:text=""
+            android:paddingEnd="5dp"
+            android:textColor="@color/colorBlackPanel"
+            android:gravity="bottom|right"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewSmall"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:paddingEnd="5dp"
         android:gravity="center|right"
-        android:text="TextView"
+        android:text=""
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollBig" />
 
     <fragment
         android:id="@+id/fragment_num_land"
@@ -39,7 +50,7 @@
         tools:layout="@layout/fragment_num_mode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fragment_sci_land"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSmall"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <fragment
@@ -50,7 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fragment_num_land"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSmall"
         tools:layout="@layout/fragment_sci_mode" />
 
 

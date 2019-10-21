@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -22,7 +23,7 @@ import android.widget.Button;
  * Use the {@link SciModeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SciModeFragment extends Fragment {
+public class SciModeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +34,10 @@ public class SciModeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
     private Button toNumButton;
+    private Button sinB, cosB, tanB, lnB, lgB, factB, piB, expB,
+            powB, openingB, closingB, sqrtB;
 
     public SciModeFragment() {
         // Required empty public constructor
@@ -82,7 +86,109 @@ public class SciModeFragment extends Fragment {
                 }
             });
         }
+        sinB = view.findViewById(R.id.buttonSin);
+        cosB= view.findViewById(R.id.buttonCos);
+        tanB= view.findViewById(R.id.buttonTan);
+        lnB = view.findViewById(R.id.buttonLn);
+        lgB = view.findViewById(R.id.buttonLog);
+        factB =  view.findViewById(R.id.buttonFact);
+        piB = view.findViewById(R.id.buttonPi);
+        expB = view.findViewById(R.id.buttonExp);
+        powB = view.findViewById(R.id.buttonPow);
+        openingB = view.findViewById(R.id.buttonOpeningBr);
+        closingB = view.findViewById(R.id.buttonClosingBr);
+        sqrtB = view.findViewById(R.id.buttonSqrt);
+
+        sinB.setOnClickListener(this);
+        cosB.setOnClickListener(this);
+        tanB.setOnClickListener(this);
+        lnB.setOnClickListener(this);
+        lgB.setOnClickListener(this);
+        factB.setOnClickListener(this);
+        piB.setOnClickListener(this);
+        expB.setOnClickListener(this);
+        powB.setOnClickListener(this);
+        openingB.setOnClickListener(this);
+        closingB.setOnClickListener(this);
+        sqrtB.setOnClickListener(this);
+
         return view;
+    }
+
+    private String appendToText(CharSequence text1, String str2) {
+        return new StringBuilder().append(text1).append(str2).toString();
+    }
+
+    @Override
+    public void onClick(View v) {
+        TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+        String expr;
+        switch (v.getId()) {
+
+            case R.id.buttonSin:
+                expr = appendToText(exprTextView.getText(), "sin(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonCos:
+                expr = appendToText(exprTextView.getText(), "cos(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonTan:
+                expr = appendToText(exprTextView.getText(), "tan(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonLn:
+                expr = appendToText(exprTextView.getText(), "ln(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonLog:
+                expr = appendToText(exprTextView.getText(), "lg(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonFact:
+                expr = appendToText(exprTextView.getText(), "!");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonPi:
+                expr = appendToText(exprTextView.getText(), "π");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonExp:
+                expr = appendToText(exprTextView.getText(), "e");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonPow:
+                expr = appendToText(exprTextView.getText(), "^");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonOpeningBr:
+                expr = appendToText(exprTextView.getText(), "(");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonClosingBr:
+                expr = appendToText(exprTextView.getText(), ")");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonSqrt:
+                expr = appendToText(exprTextView.getText(), "sqrt(");
+                exprTextView.setText(expr);
+                break;
+
+            default:
+                break;
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

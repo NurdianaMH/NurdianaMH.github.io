@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +23,7 @@ import android.widget.Button;
  * Use the {@link NumModeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NumModeFragment extends Fragment {
+public class NumModeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +34,11 @@ public class NumModeFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
     private Button toSciModeButton;
+    private Button zeroB, oneB, twoB, threeB, fourB, fiveB, sixB, sevenB,
+    eightB, nineB;
+    private Button multB, divideB, plusB, minusB, equalB, dotB, delB;
 
     public NumModeFragment() {
         // Required empty public constructor
@@ -82,10 +87,144 @@ public class NumModeFragment extends Fragment {
                 }
             });
         }
+        final TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+
+        zeroB = view.findViewById(R.id.button0);
+        oneB = view.findViewById(R.id.button1);
+        twoB = view.findViewById(R.id.button2);
+        threeB = view.findViewById(R.id.button3);
+        fourB = view.findViewById(R.id.button4);
+        fiveB = view.findViewById(R.id.button5);
+        sixB = view.findViewById(R.id.button6);
+        sevenB = view.findViewById(R.id.button7);
+        eightB = view.findViewById(R.id.button8);
+        nineB = view.findViewById(R.id.button9);
+        multB = view.findViewById(R.id.buttonMult);
+        divideB = view.findViewById(R.id.buttonDivide);
+        plusB = view.findViewById(R.id.buttonPlus);
+        minusB = view.findViewById(R.id.buttonMinus);
+        equalB = view.findViewById(R.id.buttonEqual);
+        dotB = view.findViewById(R.id.buttonDot);
+        delB = view.findViewById(R.id.buttonDelete);
+
+        zeroB.setOnClickListener(this);
+        oneB.setOnClickListener(this);
+        twoB.setOnClickListener(this);
+        threeB.setOnClickListener(this);
+        fourB.setOnClickListener(this);
+        fiveB.setOnClickListener(this);
+        sixB.setOnClickListener(this);
+        sevenB.setOnClickListener(this);
+        eightB.setOnClickListener(this);
+        nineB.setOnClickListener(this);
+        multB.setOnClickListener(this);
+        divideB.setOnClickListener(this);
+        minusB.setOnClickListener(this);
+        equalB.setOnClickListener(this);
+        dotB.setOnClickListener(this);
+        delB.setOnClickListener(this);
+
         return view;
     }
 
+    private String appendToText(CharSequence text1, String str2) {
+        return new StringBuilder().append(text1).append(str2).toString();
+    }
 
+    @Override
+    public void onClick(View v) {
+        TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+        String expr;
+        switch (v.getId()) {
+
+            case R.id.button0:
+                expr = appendToText(exprTextView.getText(), "0");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button1:
+                expr = appendToText(exprTextView.getText(), "1");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button2:
+                expr = appendToText(exprTextView.getText(), "2");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button3:
+                expr = appendToText(exprTextView.getText(), "3");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button4:
+                expr = appendToText(exprTextView.getText(), "4");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button5:
+                expr = appendToText(exprTextView.getText(), "5");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button6:
+                expr = appendToText(exprTextView.getText(), "6");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button7:
+                expr = appendToText(exprTextView.getText(), "7");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button8:
+                expr = appendToText(exprTextView.getText(), "8");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.button9:
+                expr = appendToText(exprTextView.getText(), "9");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonMult:
+                expr = appendToText(exprTextView.getText(), "*");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonDivide:
+                expr = appendToText(exprTextView.getText(), "/");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonMinus:
+                expr = appendToText(exprTextView.getText(), "-");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonPlus:
+                expr = appendToText(exprTextView.getText(), "+");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonEqual:
+                expr = appendToText(exprTextView.getText(), "");
+                exprTextView.setText(expr);
+                break;
+
+            case R.id.buttonDot:
+                expr = appendToText(exprTextView.getText(), ".");
+                exprTextView.setText(expr);
+                break;
+            case R.id.buttonDelete:
+
+                break;
+
+            default:
+                break;
+        }
+
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
