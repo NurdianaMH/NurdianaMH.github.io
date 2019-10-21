@@ -5,7 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorYellowBtn">#FABD18</color>
     <color name="colorWhitePanel">#FFFF</color>
-    <color name="colorGrayPanel">#9B9999</color>
+    <color name="colorGrayPanel">#DCDCDC</color>
     <color name="colorBlackPanel">#252424</color>
     <color name="colorGrayAnswer">#515151</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.calculateapp;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -70,14 +71,17 @@ public class NumModeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_num_mode, container, false);
-        toSciModeButton = (Button) view.findViewById(R.id.buttonToSci);
-        toSciModeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int action = R.id.action_basic_to_scientific_mode;
-                Navigation.findNavController(view).navigate(action);
-            }
-        });
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            toSciModeButton = view.findViewById(R.id.buttonToSci);
+            toSciModeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int action = R.id.action_basic_to_scientific_mode;
+                    Navigation.findNavController(view).navigate(action);
+                }
+            });
+        }
         return view;
     }
 

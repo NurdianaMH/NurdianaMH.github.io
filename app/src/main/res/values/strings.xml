@@ -23,7 +23,7 @@
     <string name="cos">cos</string>
     <string name="tan">tan</string>
     <string name="ln">ln</string>
-    <string name="log">log</string>
+    <string name="lg">lg</string>
     <string name="pow">^</string>
     <string name="pi">&#960;</string>
     <string name="exp">e</string>
