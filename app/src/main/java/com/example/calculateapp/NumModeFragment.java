@@ -80,8 +80,11 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_num_mode, container, false);
         int orientation = getResources().getConfiguration().orientation;
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+        if (orientation == Configuration.ORIENTATION_PORTRAIT ) {
             toSciModeButton = view.findViewById(R.id.buttonToSci);
+            if (BuildConfig.FLAVOR.equals("demo") || BuildConfig.FLAVOR.equals("demoDebug")) {
+                toSciModeButton.setVisibility(View.GONE);
+            }
             toSciModeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
