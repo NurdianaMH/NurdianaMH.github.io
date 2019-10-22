@@ -146,7 +146,7 @@ public class SciModeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.buttonLog:
-                expr = appendToText(exprTextView.getText(), "lg(");
+                expr = appendToText(exprTextView.getText(), "log10(");
                 exprTextView.setText(expr);
                 break;
 
@@ -156,7 +156,7 @@ public class SciModeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.buttonPi:
-                expr = appendToText(exprTextView.getText(), "π");
+                expr = appendToText(exprTextView.getText(), "pi");
                 exprTextView.setText(expr);
                 break;
 

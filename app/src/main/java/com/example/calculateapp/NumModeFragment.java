@@ -15,6 +15,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static java.lang.Double.NaN;
+import static java.lang.Double.isNaN;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -128,7 +131,9 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
             @Override
             public boolean onLongClick(View v) {
                 TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+                TextView smallTextView = getActivity().findViewById(R.id.textViewSmall);
                 exprTextView.setText("");
+                smallTextView.setText("");
                 return true;
             }
         });
@@ -143,6 +148,7 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         TextView exprTextView = getActivity().findViewById(R.id.textViewBig);
+        TextView smallTextView = getActivity().findViewById(R.id.textViewSmall);
         String expr;
         switch (v.getId()) {
 
@@ -217,8 +223,10 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.buttonEqual:
-                expr = appendToText(exprTextView.getText(), "");
-                exprTextView.setText(expr);
+                expr = exprTextView.getText().toString();
+                double answer = Calculator.calculate(expr);
+                String out = isNaN(answer) ? "Wrong Expression" : Double.toString(answer);
+                smallTextView.setText(out);
                 break;
 
             case R.id.buttonDot:
