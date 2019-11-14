@@ -9,12 +9,8 @@
 
     <Button
         android:id="@+id/buttonSin"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/sin"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonLn"
         app:layout_constraintEnd_toStartOf="@+id/buttonCos"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,12 +19,8 @@
 
     <Button
         android:id="@+id/buttonCos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/cos"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonLog"
         app:layout_constraintEnd_toStartOf="@+id/buttonTan"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,12 +29,8 @@
 
     <Button
         android:id="@+id/buttonTan"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/tan"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonFact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -51,12 +39,8 @@
 
     <Button
         android:id="@+id/buttonLog"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/lg"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonExp"
         app:layout_constraintEnd_toStartOf="@+id/buttonFact"
         app:layout_constraintHorizontal_bias="0.5"
@@ -65,12 +49,8 @@
 
     <Button
         android:id="@+id/buttonLn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/ln"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonPi"
         app:layout_constraintEnd_toStartOf="@+id/buttonLog"
         app:layout_constraintHorizontal_bias="0.5"
@@ -79,12 +59,8 @@
 
     <Button
         android:id="@+id/buttonFact"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/fact"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonPow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -93,12 +69,8 @@
 
     <Button
         android:id="@+id/buttonPi"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/pi"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonOpeningBr"
         app:layout_constraintEnd_toStartOf="@+id/buttonExp"
         app:layout_constraintHorizontal_bias="0.5"
@@ -107,12 +79,8 @@
 
     <Button
         android:id="@+id/buttonExp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/exp"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonClosingBr"
         app:layout_constraintEnd_toStartOf="@+id/buttonPow"
         app:layout_constraintHorizontal_bias="0.5"
@@ -121,12 +89,8 @@
 
     <Button
         android:id="@+id/buttonPow"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/pow"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonSqrt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -135,12 +99,8 @@
 
     <Button
         android:id="@+id/buttonOpeningBr"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/opened"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonClosingBr"
         app:layout_constraintHorizontal_bias="0.5"
@@ -149,12 +109,8 @@
 
     <Button
         android:id="@+id/buttonClosingBr"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/closed"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonSqrt"
         app:layout_constraintHorizontal_bias="0.5"
@@ -163,12 +119,8 @@
 
     <Button
         android:id="@+id/buttonSqrt"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/sqrt"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorWhitePanel"
-        android:background="@color/colorBlackPanel"
+        style="@style/DarkCalculatorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

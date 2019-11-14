@@ -8,12 +8,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/five"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,12 +18,8 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/four"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,12 +28,8 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/eight"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintHorizontal_bias="0.5"
@@ -50,12 +38,8 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/nine"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintHorizontal_bias="0.5"
@@ -64,12 +48,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/three"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonDelete"
         app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
         app:layout_constraintHorizontal_bias="0.5"
@@ -78,12 +58,8 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/six"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/buttonMult"
         app:layout_constraintHorizontal_bias="0.5"
@@ -92,12 +68,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/seven"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
@@ -106,12 +78,8 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/one"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonDot"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -120,12 +88,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/two"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
@@ -134,12 +98,8 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/zero"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
         app:layout_constraintHorizontal_bias="0.5"
@@ -148,12 +108,8 @@
 
     <Button
         android:id="@+id/buttonDot"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/dot"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toBottomOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/button0"
         app:layout_constraintHorizontal_bias="0.5"
@@ -197,12 +153,8 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/division"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonMult"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.5"
@@ -211,12 +163,8 @@
 
     <Button
         android:id="@+id/buttonMult"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/mult"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.5"
@@ -225,12 +173,8 @@
 
     <Button
         android:id="@+id/buttonMinus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/minus"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.5"
@@ -239,12 +183,8 @@
 
     <Button
         android:id="@+id/buttonPlus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/plus"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorWhitePanel"
+        style="@style/BrightCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.5"
@@ -253,12 +193,8 @@
 
     <Button
         android:id="@+id/buttonEqual"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
         android:text="@string/eq"
-        android:textSize="@dimen/dimButtonText"
-        android:textColor="@color/colorBlackPanel"
-        android:background="@color/colorYellowBtn"
+        style="@style/YellowCalculatorButton"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.5"

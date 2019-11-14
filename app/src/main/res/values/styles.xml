@@ -8,4 +8,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CaluclatorButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">@dimen/dimButtonText</item>
+    </style>
+
+    <style name="BrightCalculatorButton" parent="CaluclatorButton">
+        <item name="android:textColor">@color/colorBlackPanel</item>
+        <item name="android:background">@color/colorWhitePanel</item>
+    </style>
+
+    <style name="YellowCalculatorButton" parent="CaluclatorButton">
+        <item name="android:textColor">@color/colorBlackPanel</item>
+        <item name="android:background">@color/colorYellowBtn</item>
+    </style>
+
+    <style name="DarkCalculatorButton" parent="CaluclatorButton">
+        <item name="android:textColor">@color/colorWhitePanel</item>
+        <item name="android:background">@color/colorBlackPanel</item>
+    </style>
+
 </resources>
