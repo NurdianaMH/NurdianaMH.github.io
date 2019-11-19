@@ -19,40 +19,10 @@ import static java.lang.Double.NaN;
 import static java.lang.Double.isNaN;
 
 public class NumModeFragment extends Fragment implements View.OnClickListener {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
-
     private Button toSciModeButton;
     private Button zeroB, oneB, twoB, threeB, fourB, fiveB, sixB, sevenB,
     eightB, nineB;
     private Button multB, divideB, plusB, minusB, equalB, dotB, delB;
-
-    public NumModeFragment() {
-        // Required empty public constructor
-    }
-
-    public static NumModeFragment newInstance(String param1, String param2) {
-        NumModeFragment fragment = new NumModeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -232,23 +202,5 @@ public class NumModeFragment extends Fragment implements View.OnClickListener {
                 break;
         }
 
-    }
-
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 }
